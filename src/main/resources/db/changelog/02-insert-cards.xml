@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="02" author="gaurab">
+        <comment>Inserting cards</comment>
+        <insert tableName="card">
+            <column name="id" valueNumeric="1"/>
+            <column name="question" value="Which Energy is used to push or pull an object?"/>
+            <column name="answer" value="Force"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="2"/>
+            <column name="question" value="Energy of motion?"/>
+            <column name="answer" value="Kinetic Energy"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="3"/>
+            <column name="question" value="The amount of matter in an object?"/>
+            <column name="answer" value="Mass"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="4"/>
+            <column name="question" value="Rays travel as packets of energy called ___"/>
+            <column name="answer" value="Photons"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="5"/>
+            <column name="question" value="Substance dissolves to produce hydroxide ions"/>
+            <column name="answer" value="Base"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="6"/>
+            <column name="question" value="The study of chemical and electrical energy"/>
+            <column name="answer" value="electrochemistry"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="7"/>
+            <column name="question" value="What is oxygen elemental form?"/>
+            <column name="answer" value="O2 or O3"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="8"/>
+            <column name="question" value="Oxidation reaction involves_______"/>
+            <column name="answer" value="Transfer of electrons"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="9"/>
+            <column name="question" value="The process of fusing gametes to become zygote"/>
+            <column name="answer" value="Fertilization"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="10"/>
+            <column name="question" value="A female has symbols representing sex chromosomes"/>
+            <column name="answer" value="XX"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="11"/>
+            <column name="question" value="The white tissue of the eyeball"/>
+            <column name="answer" value="Sclera"/>
+        </insert>
+        <insert tableName="card">
+            <column name="id" valueNumeric="12"/>
+            <column name="question" value="An animal that eats only plants."/>
+            <column name="answer" value="Herbivore"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

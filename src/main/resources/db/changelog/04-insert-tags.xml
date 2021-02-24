@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="04" author="gaurab">
+        <comment>Inserting tags</comment>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="1"/>
+            <column name="tag" value="science"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="2"/>
+            <column name="tag" value="programming"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="3"/>
+            <column name="tag" value="mathematics"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="4"/>
+            <column name="tag" value="social science"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="5"/>
+            <column name="tag" value="miscellaneous"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

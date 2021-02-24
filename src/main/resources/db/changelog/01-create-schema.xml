@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="01" author="gaurab">
+        <createTable tableName="card"
+                     remarks="A table to contain all cards">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="question" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="answer" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="category"
+                     remarks="A table to contain all flashcard category">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="category" type="varchar(55)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="card_category"
+                     remarks="A relation table to contain map card and category">
+            <column name="card_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="tag"
+                     remarks="A table to contain all tags">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="tag" type="varchar(25)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="category_tag"
+                     remarks="A relation table to contain category and tags">
+            <column name="category_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tag_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="card_category" baseColumnNames="card_id"
+                                 constraintName="card_id_fk"
+                                 referencedTableName="card" referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="card_category" baseColumnNames="category_id"
+                                 constraintName="category_id_fk"
+                                 referencedTableName="category" referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="category_tag" baseColumnNames="category_id"
+                                 constraintName="cat_id_fk"
+                                 referencedTableName="category" referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="category_tag" baseColumnNames="tag_id"
+                                 constraintName="tag_id_fk"
+                                 referencedTableName="tag" referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>

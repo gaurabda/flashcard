@@ -1,0 +1,11 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="changelog/01-create-schema.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/02-insert-cards.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/03-insert-category.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/04-insert-tags.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

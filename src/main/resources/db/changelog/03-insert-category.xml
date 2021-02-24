@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="03" author="gaurab">
+        <comment>Inserting categories</comment>
+        <insert tableName="category">
+            <column name="id" valueNumeric="1"/>
+            <column name="category" value="physics"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="2"/>
+            <column name="category" value="chemistry"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="3"/>
+            <column name="category" value="biology"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="4"/>
+            <column name="category" value="Java"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="5"/>
+            <column name="category" value="python"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="6"/>
+            <column name="category" value="c++"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="7"/>
+            <column name="category" value="arithmetic"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="8"/>
+            <column name="category" value="algebra"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="9"/>
+            <column name="category" value="economics"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="10"/>
+            <column name="category" value="history"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="11"/>
+            <column name="category" value="sociology"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="12"/>
+            <column name="category" value="movies"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

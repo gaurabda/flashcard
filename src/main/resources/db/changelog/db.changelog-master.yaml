@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/01-create-schema.xml
+  - include:
+      file: db/changelog/02-insert-cards.xml
+  - include:
+      file: db/changelog/03-insert-category.xml
+  - include:
+      file: db/changelog/04-insert-tags.xml
